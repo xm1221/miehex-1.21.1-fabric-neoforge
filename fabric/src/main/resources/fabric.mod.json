@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "miehex",
+  "version": "${version}",
+  "name": "miehex",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "xm1221"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/miehex/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cn.xm1221.miehex.fabric.MieHexModFabric"
+    ],
+    "client": [
+      "cn.xm1221.miehex.fabric.client.MieHexModFabricClient"
+    ]
+  },
+  "mixins": [
+    "miehex.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
