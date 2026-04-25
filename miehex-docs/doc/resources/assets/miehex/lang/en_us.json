@@ -1,0 +1,15 @@
+{
+
+  "hexcasting.iota.miehex:enchant": "Enchantment",
+  "miehex.entry.enchant": "Enchantment Iota",
+  "miehex.entry.enchant.desc1": "I discovered that item enchantments can actually be abstracted to form Iotas. Using these Iotas, I can easily and conveniently use hexcraft to enchant items",
+  "miehex.advice.get_enchant.desc": "Accepts an item entity and returns a list of iotas corresponding to all enchantments on it",
+  "miehex.advice.give_enchant.desc": "Accepts an enchantment iota and an item entity, enchants that item, consuming media of amethyst dust with the cube of the enchantment level plus one amethyst shard",
+  "miehex.advice.enchant_add.desc": "Accepts two enchantment iotas of the same type, adds their levels together, and returns a new high-level enchantment",
+  "hexcasting.mishap.invalid_value.class.enchant": "An enchant iota",
+  "hexcasting.mishap.invalid_value.class.same_enchant": "Two identical enchant iotas",
+  "hexcasting.action.miehex:get_enchant": "Enchanter Purification",
+  "hexcasting.action.miehex:enchant": "Enchanter Strategy",
+  "hexcasting.action.miehex:enchant_add":"Enchant Add"
+
+}
