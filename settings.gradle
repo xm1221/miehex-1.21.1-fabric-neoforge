@@ -5,6 +5,10 @@ pluginManagement {
         maven { url = 'https://files.minecraftforge.net/maven/' }
         gradlePluginPortal()
     }
+    plugins {
+        id "org.jetbrains.kotlin.jvm" version kotlinVersion
+    }
+
 }
 
 rootProject.name = 'miehex'

@@ -1,0 +1,15 @@
+{
+
+  "hexcasting.iota.miehex:enchant": "附魔",
+  "hexcasting.action.miehex:get_enchant": "附魔师之纯化",
+  "hexcasting.action.miehex:enchant": "附魔师之策略",
+  "hexcasting.action.miehex:enchant_add": "铁砧之馏化",
+  "hexcasting.mishap.invalid_value.class.enchant": "一个附魔iota",
+  "hexcasting.mishap.invalid_value.class.same_enchant": "两个相同的附魔iota",
+  "miehex.entry.enchant": "附魔iota",
+  "miehex.entry.enchant.desc1": "我发现物品的附魔，实际上可以抽象出来形成Iota，利用这些Iota，我可以简单和方便地使用咒术来为物品附魔",
+  "miehex.advice.get_enchant.desc": "接受一个附魔物品实体，返回由其上所有附魔对应的iota组成的列表，可能是由于密封较好，不能读取附魔书上的附魔",
+  "miehex.advice.give_enchant.desc": "接受一个附魔iota和一个物品实体，附魔那个物品，消耗魔咒等级的立方数值的紫水晶粉的媒质",
+  "miehex.advice.enchant_add.desc": "接受两个同种魔咒的附魔iota，将它们的等级相加，返回新的高等级魔咒"
+
+}

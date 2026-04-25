@@ -13,3 +13,8 @@ dependencies {
 
 
 }
+compileKotlin {
+    kotlinOptions {
+        freeCompilerArgs += "-Xjvm-default=all"
+    }
+}
