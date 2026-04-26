@@ -20,7 +20,7 @@
   "hexcasting.action.miehex:idea_modify": "亚里士多德之提整",
   "hexcasting.mishap.invalid_value.class.empty_idea": "一个空理型 Iota",
   "hexcasting.mishap.invalid_value.class.idea": "一个理型 Iota",
-  "hexcasting.mishap.invalid_value.class.bad_idea": "一个合适的理型 Iota",
+  "hexcasting.mishap.invalid_value.class.bad_idea": "一个不太复杂的理型 Iota",
   "miehex.advice.idea_new": "返回一个空理型。",
   "miehex.advice.idea_get": "消耗少量媒质。将目标实体的基础属性（最大生命值、速度、攻击、护甲）提取到空理型中。",
   "miehex.advice.idea_summon": "根据给定理型在目标位置召唤具有理型属性的活体实体。消耗（最大生命值*10 + 速度*1000 + 攻击*100 + 护甲*50）紫水晶粉加上1枚充能紫水晶的媒质。",
