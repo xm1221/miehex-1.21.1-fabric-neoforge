@@ -7,6 +7,7 @@ import cn.xm1221.miehex.actions.enchant.OpEnchantGet;
 import cn.xm1221.miehex.actions.idea.OpIdeaGet;
 import cn.xm1221.miehex.actions.idea.OpIdeaModify;
 import cn.xm1221.miehex.actions.idea.OpIdeaSummon;
+import cn.xm1221.miehex.actions.meta.OpBraveEval;
 import cn.xm1221.miehex.actions.stack.OpPush;
 import cn.xm1221.miehex.api.ActionRegistryHelper;
 import cn.xm1221.miehex.util.PushUtils;
@@ -21,6 +22,7 @@ public class ActionRegisry {
         ActionRegistryHelper.register("new_idea","qwqwqwqwqwq",HexDir.EAST,new OpPush(PushUtils.EMPTY_IDEA,0));
         ActionRegistryHelper.register("idea_get","qwwwdwewdwwwqwqwwwdwewdwwwqqqwe",HexDir.EAST,new OpIdeaGet());
         ActionRegistryHelper.register("idea_modify","wewedwaqdeeaqqwqw",HexDir.NORTH_WEST,new OpIdeaModify());
-        ActionRegistryHelper.register("idea_entity_summon","wqwqawdeaqqdeewew",HexDir.NORTH_EAST,new OpIdeaSummon());
+        ActionRegistryHelper.register("summon_idea_entity","wqwqawdeaqqdeewew",HexDir.NORTH_EAST,new OpIdeaSummon());
+        ActionRegistryHelper.register("brave_eval","deaqqw",HexDir.SOUTH_EAST,new OpBraveEval());
     }
 }

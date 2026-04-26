@@ -67,7 +67,8 @@ class OpEnchant : SpellAction {
                 }
             },
             cost,
-            listOf(ParticleSpray.burst(entity.eyePosition, 2.0, 5))
+            listOf(ParticleSpray.burst(entity.eyePosition, 2.0, 5)),
+            1
         )
     }
 }

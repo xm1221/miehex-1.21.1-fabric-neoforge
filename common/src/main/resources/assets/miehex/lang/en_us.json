@@ -10,6 +10,19 @@
   "hexcasting.mishap.invalid_value.class.same_enchant": "Two identical enchant iotas",
   "hexcasting.action.miehex:get_enchant": "Enchanter Purification",
   "hexcasting.action.miehex:enchant": "Enchanter Strategy",
-  "hexcasting.action.miehex:enchant_add":"Enchant Add"
+  "hexcasting.action.miehex:enchant_add":"Enchant Add",
 
+  "miehex.entry.idea": "Ideas",
+  "miehex.entry.idea.desc": "The eternal templates of all things",
+  "hexcasting.action.miehex:new_idea": "Plato Meditation",
+  "hexcasting.action.miehex:idea_get": "Socrates Distillation",
+  "hexcasting.action.miehex:summon_idea_entity": "Timaeus Magic",
+  "hexcasting.action.miehex:idea_modify": "Aristotle Refinement",
+  "hexcasting.mishap.invalid_value.class.empty_idea": "An empty idea iota",
+  "hexcasting.mishap.invalid_value.class.idea": "An idea iota",
+  "hexcasting.mishap.invalid_value.class.bad_idea": "A suitable idea iota",
+  "miehex.advice.idea_new": "Returns an empty idea.",
+  "miehex.advice.idea_get": "Consumes a small amount of media. Extracts base attributes (max health, speed, attack, armor) from the target entity into an empty idea.",
+  "miehex.advice.idea_summon": "Summons a living entity at the target position based on the given idea, with attributes from the idea. Consumes (max health * 10 + speed * 1000 + attack * 100 + armor * 50) amethyst dust, minimum 1 charged amethyst.",
+  "miehex.advice.idea_modify": "Consumes a small amount of media. Modifies one attribute of an idea. Indices 1~4 correspond to: max health, speed, attack, armor."
 }
