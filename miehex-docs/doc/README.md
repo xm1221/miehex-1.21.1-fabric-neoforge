@@ -2,7 +2,7 @@
 
 Python web book docgen and [hexdoc](https://pypi.org/project/hexdoc) plugin for Miehex.
 
-Miehex addon for Hex Casting,made by xm1221.
+Miehex addon for Hex Casting.
 
 ## Version scheme
 

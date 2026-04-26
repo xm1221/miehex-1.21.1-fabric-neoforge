@@ -9,7 +9,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hexdoc-miehex"
-description = "Miehex addon for Hex Casting,made by xm1221."
+description = "Miehex addon for Hex Casting."
 readme = "doc/README.md"
 authors = [
     { name="xm1221" },
@@ -28,7 +28,7 @@ Source = "https://github.com/xm1221/miehex-1.21.1-fabric-neoforge"
 scheme = "gradle"
 source = "gradle-properties"
 py-path = "doc/src/hexdoc_miehex/__version__.py"
-key = "modVersion 1.0.0"
+key = "mod_version"
 gradle-version-regex = { regex='^(.+?)(-.+)?$', repl='\1.{minecraft_version}\2' }
 
 # Python dependencies
@@ -63,7 +63,7 @@ sources = ["doc/src"]
 # hexdoc entry points
 
 [project.entry-points.hexdoc]
-miehex = "hexdoc_miehex._hooks:MieHexPlugin"
+miehex = "hexdoc_miehex._hooks:MiehexPlugin"
 
 # linting
 
