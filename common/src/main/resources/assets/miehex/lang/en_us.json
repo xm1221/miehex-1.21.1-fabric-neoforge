@@ -24,5 +24,29 @@
   "miehex.advice.idea_new": "Returns an empty idea.",
   "miehex.advice.idea_get": "Consumes a small amount of media. Extracts base attributes (max health, speed, attack, armor) from the target entity into an empty idea.",
   "miehex.advice.idea_summon": "Summons a living entity at the target position based on the given idea, with attributes from the idea. Consumes (max health * 10 + speed * 1000 + attack * 100 + armor * 50) amethyst dust, minimum 1 charged amethyst.",
-  "miehex.advice.idea_modify": "Consumes a small amount of media. Modifies one attribute of an idea. Indices 1~4 correspond to: max health, speed, attack, armor."
+  "miehex.advice.idea_modify": "Consumes a small amount of media. Modifies one attribute of an idea. Indices 1~4 correspond to: max health, speed, attack, armor.",
+
+  "miehex.entry.miehex_patterns": "MieHex Patterns",
+  "miehex.entry.miehex_patterns.desc": "New patterns added by the MieHex",
+  "miehex.advice.import_quine": "This pattern returns a special pattern list that remains itself after a Hermes Strategy, perhaps this will have some good use.",
+  "miehex.advice.easy_thrust": "Accepts a list at position 0, a list at position 1, and a number at position 2. Inserts elements from the list at position 1 after the element at the given index in the list at position 0.",
+  "miehex.advice.easy_extract": "Accepts a list and two numbers. Returns the sublist starting at the first number with length equal to the second number, and the remaining elements.",
+  "hexcasting.action.miehex:quine": "Guardian Sequence Meditation",
+  "hexcasting.action.miehex:easy_thrust": "Insertion Refinement",
+  "hexcasting.action.miehex:easy_extract": "Extraction Strategy",
+
+  "miehex.entry.miehex_meta": "MieHex Meta",
+  "hexcasting.action.miehex:brave_eval": "Hermes'Courage",
+  "hexcasting.action.miehex:evolution": "Evolution Strategy",
+  "miehex.advice.brave_eval": "",
+  "miehex.advice.evolution": "",
+
+  "miehex.catch.mishap": "Caught Mishap",
+  "miehex.tooltip.throw": "Throw:",
+  "hexcasting.mishap.broken": "Broken Mishap",
+  "hexcasting.action.miehex:catch": "Hephaestus's Gambit",
+  "hexcasting.action.miehex:throw": "Apollo's Gambit",
+  "miehex.entry.miehex_meta.desc": "The deeper my understanding of meta-evaluation grows, the clearer the mechanisms of hex casting become. I can now catch a mishap when a pattern fails, preventing nature from disrupting my casting, and encapsulate that mishap into a so-called Mishap Iota. Only when I execute it again will the mishap be thrown. When a Mishap Iota is revealed, focusing on it will display detailed information about the mishap. However, under certain circumstances, a Mishap Iota will decay—it can still interrupt casting, but all other side effects will vanish.",
+  "miehex.advice.catch": "Removes the topmost evaluatable iota from the stack. If a mishap is thrown during its execution, the pattern immediately breaks out of that evaluation and pushes the resulting Mishap Iota onto the top of the stack.",
+  "miehex.advice.throw": "Throws a given iota as a mishap. If the mishap is caught, that iota is pushed onto the top of the stack."
 }

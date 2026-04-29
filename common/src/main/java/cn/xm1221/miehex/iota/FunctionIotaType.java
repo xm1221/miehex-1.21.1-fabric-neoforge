@@ -22,7 +22,7 @@ public class FunctionIotaType extends IotaType<FunctionIota> {
     @Override
     public StreamCodec<RegistryFriendlyByteBuf, FunctionIota> streamCodec() {
         return StreamCodec.composite(
-                IotaType.TYPED_STREAM_CODEC, FunctionIota::getId,
+                IotaType.TYPED_STREAM_CODEC, FunctionIota::getArg,
                 IotaType.TYPED_STREAM_CODEC, f -> f.getCode(),
                 IotaType.TYPED_STREAM_CODEC, FunctionIota::getResult,
                 (id, code, result) -> {

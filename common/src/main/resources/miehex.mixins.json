@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "CastingVMMixin",
     "LivingEntityAttributeMixin"
   ],
   "injectors": {

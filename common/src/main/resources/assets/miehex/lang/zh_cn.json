@@ -24,7 +24,29 @@
   "miehex.advice.idea_new": "返回一个空理型。",
   "miehex.advice.idea_get": "消耗少量媒质。将目标实体的基础属性（最大生命值、速度、攻击、护甲）提取到空理型中。",
   "miehex.advice.idea_summon": "根据给定理型在目标位置召唤具有理型属性的活体实体。消耗（最大生命值*10 + 速度*1000 + 攻击*100 + 护甲*50）紫水晶粉加上1枚充能紫水晶的媒质。",
-  "miehex.advice.idea_modify": "消耗少量媒质。修改理型的一个属性。索引1~4对应：最大生命值、速度、攻击、护甲。"
+  "miehex.advice.idea_modify": "消耗少量媒质。修改理型的一个属性。索引1~4对应：最大生命值、速度、攻击、护甲。",
 
+  "miehex.entry.miehex_patterns": "MieHex新增图案",
+  "miehex.entry.miehex_patterns.desc": "MieHex！",
+  "miehex.advice.import_quine": "此图案返回一个特殊的图案列表，该列表在赫尔墨斯之策略后仍保持不变，也许这会有一些好的用途。",
+  "miehex.advice.easy_thrust": "接受一个列表，一个列表和一个数字。将后一个列表中的元素插入到前一个列表中给定数为索引之后的元素之后。",
+  "miehex.advice.easy_extract": "接受一个列表和两个数字。返回从索引第一个数字开始、长度为第二个数字的子列表。",
+  "hexcasting.action.miehex:quine": "守护序列之精思",
+  "hexcasting.action.miehex:easy_thrust": "插入之提整",
+  "hexcasting.action.miehex:easy_extract": "抽出之提整",
 
+  "miehex.entry.miehex_meta": "MieHex元运行",
+  "hexcasting.action.miehex:brave_eval": "赫尔墨斯之勇气",
+  "hexcasting.action.miehex:evolution": "达尔文之策略",
+  "miehex.advice.brave_eval": "像赫尔墨斯之策略那样执行图案列表，但是不会规定“卡戎之策略”的退出位置",
+  "miehex.advice.evolution": "对所给列表中的每一个元素执行所给列表中的操作，将结果依次置入一个新列表中，返回那个列表。",
+
+  "miehex.catch.mishap": "捕获的事故",
+  "miehex.tooltip.throw": "抛出Iota：",
+  "hexcasting.mishap.broken": "损坏的事故",
+  "hexcasting.action.miehex:catch": "赫菲斯托斯之策略",
+  "hexcasting.action.miehex:throw": "阿波罗之策略",
+  "miehex.entry.miehex_meta.desc": "我对元运行的理解越发深刻，对咒术运行机理的认识也就越清楚，我甚至可以在图案运行错误时捕获那个事故，不让自然影响我的施法，并将这事故封装成所谓的事故Iota，当我再次执行它时，才会把那事故抛出。当事故Iota被揭示时，如果把注意力集中在它身上，还会显示事故的详细信息。不过，在一些特定的情况下，事故Iota会衰变，它依然能够打断施法。但是其他副作用却会消失。",
+  "miehex.advice.catch": "移除栈顶的一个可执行iota，如果中途抛出事故，立刻跳出这个执行并把那个事故Iota压入栈顶",
+  "miehex.advice.throw": "把一个Iota当做事故抛出，如果这个事故被捕获，则把那个iota压入栈顶"
 }

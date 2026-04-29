@@ -9,6 +9,8 @@ import at.petrak.hexcasting.api.casting.eval.vm.FrameFinishEval;
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds;
+import net.minecraft.client.multiplayer.chat.report.ReportEnvironment;
+import net.minecraft.server.MinecraftServer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -24,6 +26,7 @@ public final class ActionUtils {
         CONT =  cont;
 
     }
+
 
     public  @NotNull CastingEnvironment getEnvironment(){
         return ENVIRONMENT;

@@ -1,0 +1,47 @@
+{
+  "name": "miehex.entry.miehex_meta",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:black_wool",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "read_by_default": false,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:brave_eval",
+      "anchor": "miehex:brave_eval",
+      "input": "list of pattern",
+      "output": "",
+      "text": "miehex.advice.brave_eval"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:evolution",
+      "anchor": "miehex:evolution",
+      "input": "list",
+      "output": "list",
+      "text": "miehex.advice.evolution"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "miehex.entry.miehex_meta.desc"
+    },
+
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:catch",
+      "anchor": "miehex:catch",
+      "input": "list of pattern",
+      "output": "many|mishap",
+      "text": "miehex.advice.catch"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:throw",
+      "anchor": "miehex:throw",
+      "input": "any",
+      "output": "",
+      "text": "miehex.advice.throw"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "miehex.entry.miehex_patterns",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:white_wool",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:quine",
+      "anchor": "miehex:quine",
+      "input": "",
+      "output": "list",
+      "text": "miehex.advice.import_quine"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:easy_thrust",
+      "anchor": "miehex:easy_thrust",
+      "input": "list,list,num",
+      "output": "list",
+      "text": "miehex.advice.easy_thrust"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:easy_extract",
+      "anchor": "miehex:easy_extract",
+      "input": "list,num,num",
+      "output": "list",
+      "text": "miehex.advice.easy_extract"
+    }
+  ]
+}

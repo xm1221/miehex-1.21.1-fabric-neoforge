@@ -30,8 +30,5 @@ public class MieHexAttributes {
         return Registry.registerForHolder(BuiltInRegistries.ATTRIBUTE, id, attribute);
     }
 
-    public static void register() {
-        // 静态初始化块已经完成注册，此方法可留空或仅用于触发类加载
-    }
 
 }

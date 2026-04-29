@@ -1,6 +1,7 @@
 // cn.xm1221.miehex.api.casting.MobCastEnv.java
 package cn.xm1221.miehex.api.casting;
 
+import at.petrak.hexcasting.api.HexAPI;
 import at.petrak.hexcasting.api.casting.ParticleSpray;
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import at.petrak.hexcasting.api.casting.eval.MishapEnvironment;
@@ -13,6 +14,7 @@ import cn.xm1221.miehex.registry.MieHexAttributes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,6 +22,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.level.block.entity.vault.VaultBlockEntity;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,6 +35,7 @@ public class MobCastEnv extends CastingEnvironment {
 
     public MobCastEnv(LivingEntity caster, InteractionHand castingHand) {
         super((ServerLevel) caster.level());
+
         this.caster = caster;
         this.castingHand = castingHand;
     }
@@ -88,7 +92,7 @@ public class MobCastEnv extends CastingEnvironment {
 
         long extracted = Math.min(cost, mediaLong);
         double newMedia = media - extracted;
-        caster.getAttribute((Holder<Attribute>) MieHexAttributes.MOB_MEDIA).setBaseValue(newMedia);
+        caster.getAttribute(MieHexAttributes.MOB_MEDIA).setBaseValue(newMedia);
         return cost - extracted;
     }
 

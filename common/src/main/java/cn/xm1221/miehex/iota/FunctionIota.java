@@ -21,7 +21,7 @@ import java.util.List;
 public class FunctionIota extends Iota {
     public static final Codec<FunctionIota> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
-                    IotaType.TYPED_CODEC.fieldOf("id").forGetter(f -> f.id),
+                    IotaType.TYPED_CODEC.fieldOf("id").forGetter(f->f.arg),
                     IotaType.TYPED_CODEC.fieldOf("code").forGetter(f -> f.code),
                     IotaType.TYPED_CODEC.fieldOf("result").forGetter(f -> f.result)
             ).apply(instance, (id, code, result) -> {
@@ -32,18 +32,18 @@ public class FunctionIota extends Iota {
             })
     );
 
-    private final Iota id;
+    private final Iota arg;
     private final ListIota code;
     private final Iota result;
 
-    public FunctionIota(Iota id, ListIota code, Iota result) {
+    public FunctionIota(Iota arg, ListIota code, Iota result) {
         super(() -> FunctionIotaType.INSTANCE);
-        this.id = id;
+        this.arg = arg;
         this.code = code;
         this.result = result;
     }
 
-    public Iota getId() { return id; }
+    public Iota getArg() { return arg; }
     public ListIota getCode() { return code; }
     public Iota getResult() { return result; }
 
@@ -55,7 +55,7 @@ public class FunctionIota extends Iota {
     @Override
     protected boolean toleratesOther(Iota that) {
         if (!(that instanceof FunctionIota other)) return false;
-        return Iota.tolerates(this.id, other.id)
+        return Iota.tolerates(this.arg, other.arg)
                 && Iota.tolerates(this.code, other.code)
                 && Iota.tolerates(this.result, other.result);
     }
@@ -75,7 +75,7 @@ public class FunctionIota extends Iota {
 
     @Override
     public Component display() {
-        Component idDisplay = id.display();
+        Component idDisplay = arg.display();
         Component resultDisplay = result.display();
         return Component.literal("Function: ")
                 .withStyle(ChatFormatting.GOLD)
@@ -88,7 +88,7 @@ public class FunctionIota extends Iota {
 
     @Override
     public int hashCode() {
-        int result = id.hashCode();
+        int result = arg.hashCode();
         result = 31 * result + code.hashCode();
         result = 31 * result;
         return result;

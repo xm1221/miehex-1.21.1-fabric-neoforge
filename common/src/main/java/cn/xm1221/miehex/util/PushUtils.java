@@ -5,7 +5,10 @@ import at.petrak.hexcasting.api.casting.iota.ListIota;
 import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexDir;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
+import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster;
+import cn.xm1221.miehex.api.casting.mishap.MishapBrokenMishap;
 import cn.xm1221.miehex.iota.IdeaIota;
+import cn.xm1221.miehex.iota.MishapIota;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -40,9 +43,11 @@ public final class PushUtils {
 
     ));
 
-    public static final @NotNull EntityIota SIMP = new EntityIota(UUID.randomUUID(), Component.literal("simple"));
+    //public static final @NotNull EntityIota SIMP = new EntityIota(UUID.randomUUID(), Component.literal("simple"));
 
     public static final @NotNull IdeaIota EMPTY_IDEA = new IdeaIota("EMPTY",0,0,0,0);
+
+    public static final @NotNull ListIota EVOLUTION = new ListIota(List.of(new PatternIota(HexPattern.fromAngles("dadawaaw",HexDir.NORTH_EAST))));
 
 
 }
