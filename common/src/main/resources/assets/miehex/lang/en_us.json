@@ -41,12 +41,20 @@
   "miehex.advice.brave_eval": "",
   "miehex.advice.evolution": "",
 
+  "hexcasting.mishap.invalid_value.class.mishap": "Mishap",
+  "miehex.entry.mishap": "Mishap Iota",
   "miehex.catch.mishap": "Caught Mishap",
   "miehex.tooltip.throw": "Throw:",
   "hexcasting.mishap.broken": "Broken Mishap",
   "hexcasting.action.miehex:catch": "Hephaestus's Gambit",
   "hexcasting.action.miehex:throw": "Apollo's Gambit",
-  "miehex.entry.miehex_meta.desc": "The deeper my understanding of meta-evaluation grows, the clearer the mechanisms of hex casting become. I can now catch a mishap when a pattern fails, preventing nature from disrupting my casting, and encapsulate that mishap into a so-called Mishap Iota. Only when I execute it again will the mishap be thrown. When a Mishap Iota is revealed, focusing on it will display detailed information about the mishap. However, under certain circumstances, a Mishap Iota will decay—it can still interrupt casting, but all other side effects will vanish.",
+  "miehex.entry.mishap.desc": "The deeper my understanding of meta-evaluation grows, the clearer the mechanisms of hex casting become. I can now catch a mishap when a pattern fails, preventing nature from disrupting my casting, and encapsulate that mishap into a so-called Mishap Iota. Only when I execute it again will the mishap be thrown. When a Mishap Iota is revealed, focusing on it will display detailed information about the mishap. However, under certain circumstances, a Mishap Iota will decay—it can still interrupt casting, but all other side effects will vanish.",
   "miehex.advice.catch": "Removes the topmost evaluatable iota from the stack. If a mishap is thrown during its execution, the pattern immediately breaks out of that evaluation and pushes the resulting Mishap Iota onto the top of the stack.",
-  "miehex.advice.throw": "Throws a given iota as a mishap. If the mishap is caught, that iota is pushed onto the top of the stack."
+  "miehex.advice.throw": "Throws a given iota as a mishap. If the mishap is caught, that iota is pushed onto the top of the stack.",
+  "hexcasting.action.miehex:type_iota": "Discerning Meditation",
+  "hexcasting.action.miehex:mishap_type": "Causal Purification",
+  "hexcasting.action.miehex:mishap_args": "Rational Distillation",
+  "miehex.advice.type_iota": "Reveals the type of the topmost iota, returning it as a TypeIota.",
+  "miehex.advice.mishap_type": "Reveals the mishap type stored inside a Mishap Iota, also as a TypeIota. If the mishap has decayed, it will indicate a \"Broken Mishap\".",
+  "miehex.advice.mishap_args": "Extracts key parameters from a Mishap Iota: the invalid perpetrator, the number of missing arguments, the offending entity or location, etc. Returns Null if the mishap type is not supported."
 }

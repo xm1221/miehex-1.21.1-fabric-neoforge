@@ -29,6 +29,14 @@
       "input": "list,num,num",
       "output": "list",
       "text": "miehex.advice.easy_extract"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:type_iota",
+      "anchor": "miehex:type_iota",
+      "input": "any",
+      "output": "type_iota",
+      "text": "miehex.advice.type_iota"
     }
   ]
 }

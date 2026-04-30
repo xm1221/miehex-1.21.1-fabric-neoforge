@@ -21,27 +21,6 @@
       "input": "list",
       "output": "list",
       "text": "miehex.advice.evolution"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "miehex.entry.miehex_meta.desc"
-    },
-
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "miehex:catch",
-      "anchor": "miehex:catch",
-      "input": "list of pattern",
-      "output": "many|mishap",
-      "text": "miehex.advice.catch"
-    },
-    {
-      "type": "hexcasting:pattern",
-      "op_id": "miehex:throw",
-      "anchor": "miehex:throw",
-      "input": "any",
-      "output": "",
-      "text": "miehex.advice.throw"
     }
   ]
 }

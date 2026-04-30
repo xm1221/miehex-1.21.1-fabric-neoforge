@@ -2,11 +2,8 @@ package cn.xm1221.miehex.registry;
 
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes;
 import cn.xm1221.miehex.MieHexMod;
-import cn.xm1221.miehex.iota.EnchantIotaType;
+import cn.xm1221.miehex.iota.*;
 //import cn.xm1221.miehex.iota.FunctionIotaType;
-import cn.xm1221.miehex.iota.FunctionIotaType;
-import cn.xm1221.miehex.iota.IdeaIotaType;
-import cn.xm1221.miehex.iota.MishapIotaType;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 
@@ -34,6 +31,12 @@ public class IotaRegistry {
                 HexIotaTypes.REGISTRY,
                 ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID, "mishap"),
                 MishapIotaType.INSTANCE
+        );
+
+        Registry.register(
+                HexIotaTypes.REGISTRY,
+                ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID,"type"),
+                TypeIotaType.INSTANCE
         );
     }
 }

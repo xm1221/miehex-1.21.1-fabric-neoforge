@@ -1,0 +1,46 @@
+{
+  "name": "miehex.entry.mishap",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:book",
+  "advancement": "hexcasting:root",
+  "sortnum": 5,
+  "read_by_default": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "miehex.entry.mishap.desc"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:catch",
+      "anchor": "miehex:catch",
+      "input": "list of patterns",
+      "output": "many|mishap",
+      "text": "miehex.advice.catch"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:throw",
+      "anchor": "miehex:throw",
+      "input": "any",
+      "output": "",
+      "text": "miehex.advice.throw"
+    },
+    {
+    "type": "hexcasting:pattern",
+    "op_id": "miehex:mishap_type",
+    "anchor": "miehex:mishap_type",
+    "input": "mishap",
+    "output": "type",
+    "text": "miehex.advice.mishap_type"
+    },
+    {
+    "type": "hexcasting:pattern",
+    "op_id": "miehex:mishap_args",
+    "anchor": "miehex:mishap_args",
+    "input": "mishap",
+    "output": "many",
+    "text": "miehex.advice.mishap_args"
+    }
+  ]
+}

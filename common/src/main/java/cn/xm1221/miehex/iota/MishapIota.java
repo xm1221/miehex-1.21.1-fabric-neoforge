@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class MishapIota extends Iota {
-    private final Mishap value;
+    public final Mishap value;
 
     private final Component errormessage;
 
@@ -130,4 +130,6 @@ public class MishapIota extends Iota {
     public String getErrormessageCode() {
         return Component.Serializer.toJson(this.errormessage,RegistryAccess.EMPTY);
     }
+
+
 }
