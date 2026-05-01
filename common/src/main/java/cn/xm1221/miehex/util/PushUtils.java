@@ -1,23 +1,14 @@
 package cn.xm1221.miehex.util;
 
-import at.petrak.hexcasting.api.casting.iota.EntityIota;
 import at.petrak.hexcasting.api.casting.iota.ListIota;
 import at.petrak.hexcasting.api.casting.iota.PatternIota;
 import at.petrak.hexcasting.api.casting.math.HexDir;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
-import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster;
-import cn.xm1221.miehex.api.casting.mishap.MishapBrokenMishap;
 import cn.xm1221.miehex.iota.IdeaIota;
-import cn.xm1221.miehex.iota.MishapIota;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.UUID;
+
 
 public final class PushUtils {
     public static final @NotNull  ListIota QUNIE = new ListIota(List.of(
