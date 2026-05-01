@@ -2,18 +2,23 @@ package cn.xm1221.miehex.iota;
 
 import at.petrak.hexcasting.api.casting.eval.CastResult;
 import at.petrak.hexcasting.api.casting.eval.ResolvedPatternType;
-import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
-import at.petrak.hexcasting.api.casting.eval.vm.CastingVM;
-import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
+import at.petrak.hexcasting.api.casting.eval.sideeffects.OperatorSideEffect;
+import at.petrak.hexcasting.api.casting.eval.vm.*;
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.casting.iota.ListIota;
+import at.petrak.hexcasting.api.casting.math.HexDir;
+import at.petrak.hexcasting.api.casting.math.HexPattern;
+import at.petrak.hexcasting.api.casting.mishaps.Mishap;
+import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidOperatorArgs;
+import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidSpellDatumType;
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -28,15 +33,15 @@ public class FunctionIota extends Iota {
                 if (!(code instanceof ListIota)) {
                     code = new ListIota(List.of());
                 }
-                return new FunctionIota(id, (ListIota) code, result);
+                return new FunctionIota((TypeIota) id, (ListIota) code, (TypeIota) result);
             })
     );
 
-    private final Iota arg;
+    private final TypeIota arg;
     private final ListIota code;
-    private final Iota result;
+    private final TypeIota result;
 
-    public FunctionIota(Iota arg, ListIota code, Iota result) {
+    public FunctionIota(TypeIota arg, ListIota code, TypeIota result) {
         super(() -> FunctionIotaType.INSTANCE);
         this.arg = arg;
         this.code = code;
@@ -67,10 +72,33 @@ public class FunctionIota extends Iota {
 
     @Override
     public @NotNull CastResult execute(CastingVM vm, ServerLevel world, SpellContinuation continuation) {
-        CastingImage image = vm.getImage();
+        return super.execute(vm, world, continuation);
+        /*CastingImage image = vm.getImage();
         List<Iota> stack = image.getStack();
-        stack.add(this);
-        return new CastResult(this, continuation, null, List.of(), ResolvedPatternType.EVALUATED, HexEvalSounds.NOTHING);
+        if(stack.getLast().getClass().getSimpleName().equals(this.arg.classname)) {
+            SpellContinuation cont= continuation.pushFrame(FrameFinishEval.INSTANCE);
+            return new CastResult(
+                    this,
+                    cont.pushFrame(new FrameEvaluate(this.code.getList(),true)),
+                    null,
+                    List.of(),
+                    ResolvedPatternType.EVALUATED,
+                    HexEvalSounds.HERMES
+            );
+        }
+        return new CastResult(
+                this,
+                SpellContinuation.Done.INSTANCE,
+                null,
+                List.of(
+                        new OperatorSideEffect.DoMishap(
+                                new MishapInvalidSpellDatumType(this.arg),
+                                new Mishap.Context(new HexPattern(HexDir.WEST, List.of()), null)
+                        )
+                ),
+                ResolvedPatternType.EVALUATED,
+                HexEvalSounds.MISHAP
+        );*/
     }
 
     @Override
@@ -88,9 +116,6 @@ public class FunctionIota extends Iota {
 
     @Override
     public int hashCode() {
-        int result = arg.hashCode();
-        result = 31 * result + code.hashCode();
-        result = 31 * result;
-        return result;
+        return HashCodeBuilder.reflectionHashCode(this);
     }
 }

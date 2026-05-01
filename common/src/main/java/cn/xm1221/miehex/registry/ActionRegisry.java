@@ -40,4 +40,5 @@ public class ActionRegisry {
         ActionRegistryHelper.register("mishap_args","deeeew",HexDir.NORTH_EAST,new OpMishapArgs().getInvaldiota());
 
     }
+
 }

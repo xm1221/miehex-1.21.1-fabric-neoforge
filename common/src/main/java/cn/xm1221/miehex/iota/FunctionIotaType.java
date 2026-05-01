@@ -23,13 +23,13 @@ public class FunctionIotaType extends IotaType<FunctionIota> {
     public StreamCodec<RegistryFriendlyByteBuf, FunctionIota> streamCodec() {
         return StreamCodec.composite(
                 IotaType.TYPED_STREAM_CODEC, FunctionIota::getArg,
-                IotaType.TYPED_STREAM_CODEC, f -> f.getCode(),
+                IotaType.TYPED_STREAM_CODEC, FunctionIota::getCode,
                 IotaType.TYPED_STREAM_CODEC, FunctionIota::getResult,
                 (id, code, result) -> {
                     if (!(code instanceof ListIota)) {
                         code = new ListIota(List.of());
                     }
-                    return new FunctionIota(id, (ListIota) code, result);
+                    return new FunctionIota((TypeIota) id, (ListIota) code, (TypeIota) result);
                 }
         );
     }

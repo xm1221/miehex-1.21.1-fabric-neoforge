@@ -15,14 +15,14 @@ from .__gradle_version__ import FULL_VERSION, GRADLE_VERSION, MINECRAFT_VERSION
 from .__version__ import PY_VERSION
 
 
-class MiehexPlugin(ModPluginImpl):
+class MieHexPlugin(ModPluginImpl):
     @staticmethod
     @hookimpl
     def hexdoc_mod_plugin(branch: str) -> ModPlugin:
-        return MiehexModPlugin(branch=branch)
+        return MieHexModPlugin(branch=branch)
 
 
-class MiehexModPlugin(ModPluginWithBook):
+class MieHexModPlugin(ModPluginWithBook):
     @property
     @override
     def modid(self) -> str:

@@ -5,7 +5,6 @@ import at.petrak.hexcasting.api.casting.castables.Action;
 import at.petrak.hexcasting.api.casting.math.HexDir;
 import at.petrak.hexcasting.api.casting.math.HexPattern;
 import at.petrak.hexcasting.common.lib.hex.HexActions;
-import at.petrak.hexcasting.xplat.IXplatAbstractions;
 import cn.xm1221.miehex.MieHexMod;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -15,10 +14,10 @@ public class ActionRegistryHelper {
     /**
      * 注册一个图案动作。
      *
-     * @param id        id
-     * @param angles    笔顺角度序列，如 "qaq"
-     * @param startDir  起始方向，如 HexDir.NORTH_EAST
-     * @param action    动作实例
+     * @param id       id
+     * @param angles   笔顺角度序列，如 "qaq"
+     * @param startDir 起始方向，如 HexDir.NORTH_EAST
+     * @param action   动作实例
      */
     public static void register(String id, String angles, HexDir startDir, Action action) {
         HexPattern pattern = HexPattern.fromAngles(angles, startDir);

@@ -2,8 +2,10 @@
 # https://copier.readthedocs.io/en/stable/updating/#never-change-the-answers-file-manually
 _commit: v0.2.0
 _src_path: gh:hexdoc-dev/hexdoc-hexcasting-template
-advanced: false
+advanced: true
 capitalize_platforms: false
+classname: MieHex
+generate_vscode: true
 github_repo: miehex-1.21.1-fabric-neoforge
 github_user: xm1221
 gradle_deps_type: gradle.properties
@@ -17,4 +19,8 @@ mod_description: Miehex addon for Hex Casting.
 mod_display_name: Miehex
 modid: miehex
 multiloader: true
-pattern_registry_path: /main/java/cn/xm1221/miehex/registry/ActionRegisry.java
+package_name: hexdoc-miehex
+package_slug: hexdoc_miehex
+pages_url: https://xm1221.github.io/miehex-1.21.1-fabric-neoforge
+pattern_registry_path: common/src/main/java/cn/xm1221/miehex/registry/ActionRegisry.java
+source_url: https://github.com/xm1221/miehex-1.21.1-fabric-neoforge
