@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.mishaps.Mishap;
 import at.petrak.hexcasting.common.lib.HexDamageTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
@@ -20,32 +21,49 @@ public class MobMishapEnv extends MishapEnvironment {
 
     @Override
     public void yeetHeldItemsTowards(Vec3 targetPos) {
-        var pos = caster.position();
+        Vec3 pos = null;
+        if (caster != null) {
+            pos = caster.position();
+        }
         var delta = targetPos.subtract(pos).normalize().scale(0.5);
         for (var hand : InteractionHand.values()) {
-            var stack = caster.getItemInHand(hand);
-            caster.setItemInHand(hand, ItemStack.EMPTY);
+            ItemStack stack = null;
+            if (caster != null) {
+                stack = caster.getItemInHand(hand);
+            }
+            if (caster != null) {
+                caster.setItemInHand(hand, ItemStack.EMPTY);
+            }
             yeetItem(stack, pos, delta);
         }
     }
 
     @Override
     public void dropHeldItems() {
-        var delta = caster.getLookAngle();
-        yeetHeldItemsTowards(caster.position().add(delta));
+        Vec3 delta = null;
+        if (caster != null) {
+            delta = caster.getLookAngle();
+        }
+        if (caster != null) {
+            yeetHeldItemsTowards(caster.position().add(delta));
+        }
     }
 
     @Override
     public void damage(float healthProportion) {
-        //Mishap.trulyHurt(caster, caster.damageSources().source(HexDamageTypes.OVERCAST), caster.getMaxHealth() * healthProportion);
+        if (caster != null) {
+            Mishap.trulyHurt(caster, caster.damageSources().starve(), caster.getMaxHealth() * healthProportion);
+        }
     }
 
     @Override
     public void drown() {
-        if (caster.getAirSupply() < 200) {
+        if (caster != null && caster.getAirSupply() < 200) {
             caster.hurt(caster.damageSources().drown(), 2f);
         }
-        caster.setAirSupply(0);
+        if (caster != null) {
+            caster.setAirSupply(0);
+        }
     }
 
     @Override

@@ -20,7 +20,7 @@ class OpIdeaModify: ConstMediaAction {
         var idea = args[0]
         val idx = args.getInt(1)
         val value = args.getDouble(2)
-        if (idea is IdeaIota) {
+        if (idea is IdeaIota && value>0){
             val list = mutableListOf(idea.maxHealth,idea.movementSpeed,idea.attackDamage,idea.armor)
             list[idx-1] = value
             return listOf(
