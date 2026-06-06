@@ -33,7 +33,7 @@ class FrameCatch: ContinuationFrame {
         harness: CastingVM
     ): CastResult {
         return CastResult(
-            NullIota.INSTANCE,
+            NullIota(),
             continuation,
             null,
             listOf(),
@@ -87,7 +87,7 @@ class FrameCatch: ContinuationFrame {
                   )
               }
               val newimg = harness.image.copy(stack=stack)
-              return res?.let { CastResult(NullIota.INSTANCE,it, newimg,listOf(), ResolvedPatternType.EVALUATED,HexEvalSounds.MISHAP,) }
+              return res?.let { CastResult(NullIota(),it, newimg,listOf(), ResolvedPatternType.EVALUATED,HexEvalSounds.MISHAP,) }
             }
         }
 

@@ -1,0 +1,46 @@
+{
+  "name": "miehex.entry.type",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:spyglass",
+  "advancement": "hexcasting:root",
+  "sortnum": 6,
+  "read_by_default": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "miehex.entry.type.desc"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:block_type",
+      "anchor": "miehex:block_type",
+      "input": "vec",
+      "output": "type",
+      "text": "miehex.advice.block_type"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:item_type",
+      "anchor": "miehex:item_type",
+      "input": "itementity",
+      "output": "type",
+      "text": "miehex.advice.item_type"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:entity_type",
+      "anchor": "miehex:entity_type",
+      "input": "entity",
+      "output": "type",
+      "text": "miehex.advice.entity_type"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "miehex:item_type/hand",
+      "anchor": "miehex:item_type/hand",
+      "input": "",
+      "output": "type",
+      "text": "miehex.advice.item_type/hand"
+    }
+  ]
+}

@@ -40,6 +40,10 @@ public class ActionRegisry {
         ActionRegistryHelper.register("mishap_type","waqedw",HexDir.NORTH_EAST,new OpTypes().getMishaptype());
         ActionRegistryHelper.register("mishap_args","deeeew",HexDir.NORTH_EAST,new OpMishapArgs().getInvaldiota());
         ActionRegistryHelper.register("make_mishap","deawedqdewq",HexDir.SOUTH_EAST,new OpMakeMishap());
+        ActionRegistryHelper.register("block_type","wedewq",HexDir.SOUTH_EAST,new OpTypes().getBlocktype());
+        ActionRegistryHelper.register("item_type","ead",HexDir.EAST,new OpTypes().getItemtype());
+        ActionRegistryHelper.register("entity_type","qda",HexDir.NORTH_EAST,new OpTypes().getEntitytype());
+        ActionRegistryHelper.register("item_type/hand","edq",HexDir.SOUTH_EAST,new OpTypes().getItemtype_hand());
     }
 
 }

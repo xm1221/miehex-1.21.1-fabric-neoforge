@@ -51,7 +51,7 @@ class OpMishapArgs() {
                             mishap.pos.z.toDouble()
                         )))
                     }
-                    return listOf(NullIota.INSTANCE)
+                    return listOf(NullIota())
 
                 }
 

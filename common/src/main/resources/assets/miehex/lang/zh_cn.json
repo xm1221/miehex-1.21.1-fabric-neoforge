@@ -56,7 +56,17 @@
   "hexcasting.action.miehex:mishap_args": "析理之纯化",
   "miehex.advice.type_iota": "获取栈顶 iota 的类型，以一个 TypeIota 形式返回，所谓的TypeIota，就是一种储存各种类型信息的Iota",
   "miehex.advice.mishap_type": "揭示事故 iota 内部的事故类型，以 TypeIota 的形式返回。若事故已衰变，会指出它是“损坏的事故”。",
-  "miehex.advice.mishap_args": "抽取出事故 iota 中的关键参数：无效的参数、需要的参数数量、出错的实体或位置等。若事故类型不被支持，则返回 Null。"
+  "miehex.advice.mishap_args": "抽取出事故 iota 中的关键参数：无效的参数、需要的参数数量、出错的实体或位置等。若事故类型不被支持，则返回 Null。",
+  "miehex.entry.type": "TypeIota",
+  "miehex.entry.type.desc": "将方块、物品或实体的类型以 TypeIota 形式揭示。",
+  "hexcasting.action.miehex:block_type": "该亚之纯化",
+  "hexcasting.action.miehex:item_type": "代达罗斯之纯化",
+  "hexcasting.action.miehex:entity_type": "普罗透斯之纯化",
+  "hexcasting.action.miehex:item_type/hand": "帕拉斯之精思",
+  "miehex.advice.block_type": "接受一个向量，返回该位置处方块的类型。",
+  "miehex.advice.item_type": "接受一个物品实体，返回该物品的类型。",
+  "miehex.advice.entity_type": "接受一个实体，返回该实体的类型。",
+  "miehex.advice.item_type/hand": "返回施法者副手物品的类型，若无则返回 Null。"
 
 
 }

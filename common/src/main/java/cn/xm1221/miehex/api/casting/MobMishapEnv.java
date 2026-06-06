@@ -75,4 +75,9 @@ public class MobMishapEnv extends MishapEnvironment {
     public void blind(int ticks) {
         // 可添加失明效果，但生物不需要
     }
+
+    @Override
+    public void nauseate(int i) {
+
+    }
 }

@@ -56,5 +56,15 @@
   "hexcasting.action.miehex:mishap_args": "Rational Distillation",
   "miehex.advice.type_iota": "Reveals the type of the topmost iota, returning it as a TypeIota.",
   "miehex.advice.mishap_type": "Reveals the mishap type stored inside a Mishap Iota, also as a TypeIota. If the mishap has decayed, it will indicate a \"Broken Mishap\".",
-  "miehex.advice.mishap_args": "Extracts key parameters from a Mishap Iota: the invalid perpetrator, the number of missing arguments, the offending entity or location, etc. Returns Null if the mishap type is not supported."
+  "miehex.advice.mishap_args": "Extracts key parameters from a Mishap Iota: the invalid perpetrator, the number of missing arguments, the offending entity or location, etc. Returns Null if the mishap type is not supported.",
+  "miehex.entry.type": "Type Iota",
+  "miehex.entry.type.desc": "Reveals the type of a block, item, or entity as a TypeIota.",
+  "hexcasting.action.miehex:block_type": "Gaia Purification",
+  "hexcasting.action.miehex:item_type": "Daedalus Purification",
+  "hexcasting.action.miehex:entity_type": "Proteus Purification",
+  "hexcasting.action.miehex:item_type/hand": "Pallas Meditation",
+  "miehex.advice.block_type": "Accepts a vector and returns the type of the block at that position.",
+  "miehex.advice.item_type": "Accepts an item entity and returns the type of the item.",
+  "miehex.advice.entity_type": "Accepts an entity and returns the type of the entity.",
+  "miehex.advice.item_type/hand": "Returns the type of the item in the caster's other hand, or null if none."
 }

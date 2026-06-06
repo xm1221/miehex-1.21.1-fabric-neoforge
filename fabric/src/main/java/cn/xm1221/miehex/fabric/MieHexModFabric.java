@@ -13,5 +13,6 @@ public final class MieHexModFabric implements ModInitializer {
 
         // Run our common setup.
         MieHexMod.init();
+        //TODO:MAKE FABRIC VERSION
     }
 }
