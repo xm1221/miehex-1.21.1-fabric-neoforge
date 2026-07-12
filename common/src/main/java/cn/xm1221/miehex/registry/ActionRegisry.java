@@ -34,7 +34,7 @@ public class ActionRegisry {
         ActionRegistryHelper.register("easy_thrust","wawaqw", HexDir.SOUTH_EAST, new OpThrust(false));
         ActionRegistryHelper.register("easy_extract","wedwdw", HexDir.SOUTH_WEST, new OpThrust(true));
         ActionRegistryHelper.register("evolution","dadawaaw",HexDir.NORTH_EAST,new OpEvolution());
-        ActionRegistryHelper.register("catch","deaq", HexDir.SOUTH_EAST, new OpCatch());
+        ActionRegistryHelper.register("catch","deaqw", HexDir.SOUTH_EAST, new OpCatch());
         ActionRegistryHelper.register("throw","edqa",HexDir.SOUTH_EAST,new OpThrow());
         ActionRegistryHelper.register("type_iota","wqawdew",HexDir.NORTH_EAST,new OpTypes().getIotatype());
         ActionRegistryHelper.register("mishap_type","waqedw",HexDir.NORTH_EAST,new OpTypes().getMishaptype());
