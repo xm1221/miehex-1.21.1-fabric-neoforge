@@ -109,13 +109,13 @@ public class MobCastEnv extends CastingEnvironment {
     }
 
     @Override
-    protected List<ItemStack> getUsableStacks(StackDiscoveryMode mode) {
+   public List<ItemStack> getUsableStacks(StackDiscoveryMode mode) {
         // 生物没有物品栏，返回空列表
         return List.of();
     }
 
     @Override
-    protected List<HeldItemInfo> getPrimaryStacks() {
+    public List<HeldItemInfo> getPrimaryStacks() {
         ItemStack main = caster.getItemInHand(castingHand);
         ItemStack off = caster.getItemInHand(InteractionHand.OFF_HAND);
         return List.of(new HeldItemInfo(main, castingHand), new HeldItemInfo(off, InteractionHand.OFF_HAND));

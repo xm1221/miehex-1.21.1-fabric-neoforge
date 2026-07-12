@@ -42,6 +42,7 @@ public final class ActionUtils {
                 img.getParenCount(),
                 img.getParenthesized(),
                 img.getEscapeNext(),
+                img.getSimulateNext(),
                 img.getOpsConsumed() + 1,
                 img.getUserData()
         );

@@ -8,6 +8,7 @@ import at.petrak.hexcasting.api.casting.eval.vm.FrameForEach
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation
 import at.petrak.hexcasting.api.casting.getList
 import at.petrak.hexcasting.api.casting.mishaps.MishapNotEnoughArgs
+import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
 
 class OpEvolution: Action {
@@ -23,7 +24,7 @@ class OpEvolution: Action {
 
         val instrs = stack.getList(stack.lastIndex, stack.size)
         stack.removeLastOrNull()
-        val frame = FrameForEach(instrs, instrs, listOf(), mutableListOf())
+        val frame = FrameForEach(instrs, instrs, listOf(), TreeList.empty())
         val image2 = image.withUsedOp().copy(stack = stack)
          val newCont = continuation.pushFrame(frame)
         return OperationResult(image2, listOf(), newCont, HexEvalSounds.THOTH)
