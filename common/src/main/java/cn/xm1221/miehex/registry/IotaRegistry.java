@@ -1,7 +1,9 @@
 package cn.xm1221.miehex.registry;
 
+import at.petrak.hexcasting.common.lib.hex.HexContinuationTypes;
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes;
 import cn.xm1221.miehex.MieHexMod;
+import cn.xm1221.miehex.api.casting.frame.FrameCatch;
 import cn.xm1221.miehex.iota.*;
 //import cn.xm1221.miehex.iota.FunctionIotaType;
 import net.minecraft.core.Registry;
@@ -37,6 +39,13 @@ public class IotaRegistry {
                 HexIotaTypes.REGISTRY,
                 ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID,"type"),
                 TypeIotaType.INSTANCE
+        );
+
+        // Register FrameCatch continuation type (required by hexcasting 0.12.0+ for network serialization)
+        Registry.register(
+                HexContinuationTypes.REGISTRY,
+                ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID, "catch"),
+                FrameCatch.TYPE
         );
     }
 }

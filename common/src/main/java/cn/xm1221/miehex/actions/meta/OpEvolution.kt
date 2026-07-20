@@ -24,8 +24,8 @@ class OpEvolution: Action {
 
         val instrs = stack.getList(stack.lastIndex, stack.size)
         stack.removeLastOrNull()
-        val frame = FrameForEach(instrs, instrs, listOf(), TreeList.empty())
-        val image2 = image.withUsedOp().copy(stack = stack)
+        val frame = FrameForEach(instrs, instrs, TreeList.empty(), TreeList.empty(), TreeList.empty())
+        val image2 = image.withUsedOp().copy(stack = TreeList.from(stack))
          val newCont = continuation.pushFrame(frame)
         return OperationResult(image2, listOf(), newCont, HexEvalSounds.THOTH)
     }

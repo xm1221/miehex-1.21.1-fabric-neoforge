@@ -1,6 +1,6 @@
 package cn.xm1221.miehex.util;
 
-import at.petrak.hexcasting.api.casting.SpellList;
+
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import at.petrak.hexcasting.api.casting.eval.OperationResult;
 import at.petrak.hexcasting.api.casting.eval.vm.CastingImage;
@@ -8,6 +8,7 @@ import at.petrak.hexcasting.api.casting.eval.vm.FrameEvaluate;
 import at.petrak.hexcasting.api.casting.eval.vm.FrameFinishEval;
 import at.petrak.hexcasting.api.casting.eval.vm.SpellContinuation;
 import at.petrak.hexcasting.api.casting.iota.Iota;
+import at.petrak.hexcasting.api.utils.TreeList;
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +39,7 @@ public final class ActionUtils {
     public OperationResult buildStackResult(List<Iota> stack){
          var img = this.IMAGE;
         CastingImage newImage = img.copy(
-                stack,
+                (TreeList<Iota>) stack,
                 img.getParenCount(),
                 img.getParenthesized(),
                 img.getEscapeNext(),
@@ -51,8 +52,7 @@ public final class ActionUtils {
 
     public OperationResult buildOpResult(List<Iota> list, SpellContinuation cont){
         FrameFinishEval finishEval = FrameFinishEval.INSTANCE;
-        SpellList spellList = new SpellList.LList(list);
-        FrameEvaluate evaluate = new FrameEvaluate(spellList,true);
+        FrameEvaluate evaluate = new FrameEvaluate(TreeList.from(list),true);
         cont.pushFrame(finishEval);
         cont.pushFrame(evaluate);
         return new OperationResult(this.IMAGE, List.of(), cont, HexEvalSounds.HERMES);

@@ -12,6 +12,7 @@ import at.petrak.hexcasting.api.casting.iota.NullIota
 import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.api.casting.mishaps.Mishap
+import at.petrak.hexcasting.api.utils.TreeList
 import at.petrak.hexcasting.common.lib.hex.HexEvalSounds
 import cn.xm1221.miehex.api.casting.mishap.MishapThrow
 import cn.xm1221.miehex.iota.MishapIota
@@ -42,7 +43,8 @@ class FrameCatch: ContinuationFrame {
         )
     }
 
-    override fun breakDownwards(stack: List<Iota>)= true to stack;
+
+    override fun breakDownwards(stack: TreeList<Iota>)= true to stack;
 
     override fun size(): Int {
         return 0
@@ -66,7 +68,7 @@ class FrameCatch: ContinuationFrame {
             else  {
                 val res = findPoint(cont)
               if (res == SpellContinuation.Done)return null;
-              val stack = harness.image.stack.toMutableList()
+              val stack: MutableList<Iota?> = harness.image.stack.toMutableList()
               val effect = result.sideEffects.find{it is OperatorSideEffect.DoMishap }
               val mishap: Mishap = (effect as OperatorSideEffect.DoMishap).mishap
               if (mishap is MishapThrow) {
@@ -86,7 +88,7 @@ class FrameCatch: ContinuationFrame {
                       )
                   )
               }
-              val newimg = harness.image.copy(stack=stack)
+              val newimg = harness.image.copy(stack= TreeList.from(stack))
               return res?.let { CastResult(NullIota(),it, newimg,listOf(), ResolvedPatternType.EVALUATED,HexEvalSounds.MISHAP,) }
             }
         }
