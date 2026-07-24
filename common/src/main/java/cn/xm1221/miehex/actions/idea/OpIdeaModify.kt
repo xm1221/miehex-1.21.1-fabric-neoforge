@@ -4,6 +4,7 @@ import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getDouble
 import at.petrak.hexcasting.api.casting.getInt
+import at.petrak.hexcasting.api.casting.getPositiveInt
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapInvalidIota
 import cn.xm1221.miehex.iota.IdeaIota
@@ -18,7 +19,7 @@ class OpIdeaModify: ConstMediaAction {
         env: CastingEnvironment
     ): List<Iota> {
         var idea = args[0]
-        val idx = args.getInt(1)
+        val idx = args.getPositiveInt(1)
         val value = args.getDouble(2)
         if (idea is IdeaIota && value>0){
             val list = mutableListOf(idea.maxHealth,idea.movementSpeed,idea.attackDamage,idea.armor)
