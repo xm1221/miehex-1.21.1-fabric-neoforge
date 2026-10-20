@@ -39,15 +39,15 @@ public final class ActionUtils {
     public OperationResult buildStackResult(List<Iota> stack){
          var img = this.IMAGE;
         CastingImage newImage = img.copy(
-                (TreeList<Iota>) stack,
+                TreeList.from(stack),
                 img.getParenCount(),
                 img.getParenthesized(),
                 img.getEscapeNext(),
                 img.getSimulateNext(),
-                img.getOpsConsumed() + 1,
-                img.getUserData()
-        );
-        return new OperationResult(newImage,List.of(), this.CONT, HexEvalSounds.NOTHING);
+                img.getOpsConsumed(),
+                img.getComponents()
+        ).withUsedOp();
+        return new OperationResult(newImage,List.of(), this.CONT, HexEvalSounds.NOTHING.get());
     }
 
     public OperationResult buildOpResult(List<Iota> list, SpellContinuation cont){
@@ -55,7 +55,7 @@ public final class ActionUtils {
         FrameEvaluate evaluate = new FrameEvaluate(TreeList.from(list),true);
         cont.pushFrame(finishEval);
         cont.pushFrame(evaluate);
-        return new OperationResult(this.IMAGE, List.of(), cont, HexEvalSounds.HERMES);
+        return new OperationResult(this.IMAGE, List.of(), cont, HexEvalSounds.HERMES.get());
     }
 
 

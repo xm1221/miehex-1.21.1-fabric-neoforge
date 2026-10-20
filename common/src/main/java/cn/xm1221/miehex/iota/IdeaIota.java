@@ -1,5 +1,8 @@
 package cn.xm1221.miehex.iota;
 
+import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
+import org.jetbrains.annotations.Nullable;
+
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import cn.xm1221.miehex.util.SgaUtils;
 import com.mojang.serialization.Codec;
@@ -41,7 +44,7 @@ public class IdeaIota extends Iota {
     public double getArmor() { return armor; }
 
     @Override
-    public boolean isTruthy() {
+    public boolean isTruthy(@Nullable CastingEnvironment env) {
         return true;
     }
 

@@ -1,5 +1,8 @@
 package cn.xm1221.miehex.iota;
 
+import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
+import org.jetbrains.annotations.Nullable;
+
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.IotaType;
 import com.mojang.serialization.Codec;
@@ -36,7 +39,7 @@ public static final Codec<TypeIota> CODEC = RecordCodecBuilder.create(
     }
 
     @Override
-    public boolean isTruthy() {
+    public boolean isTruthy(@Nullable CastingEnvironment env) {
         return true;
     }
 

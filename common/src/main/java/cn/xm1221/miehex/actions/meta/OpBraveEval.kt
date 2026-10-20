@@ -31,6 +31,6 @@ class OpBraveEval : Action{
         val newCont = continuation
         val frame = FrameEvaluate(instrs, true)
         val image2 = image.withUsedOp().copy(stack = TreeList.from(newStack))
-        return OperationResult(image2, listOf(), newCont.pushFrame(frame), HexEvalSounds.HERMES)
+        return OperationResult(image2, listOf(), newCont.pushFrame(frame), HexEvalSounds.HERMES.get())
     }
 }

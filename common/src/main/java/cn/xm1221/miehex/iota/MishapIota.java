@@ -1,5 +1,8 @@
 package cn.xm1221.miehex.iota;
 
+import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
+import org.jetbrains.annotations.Nullable;
+
 import at.petrak.hexcasting.api.casting.eval.CastResult;
 import at.petrak.hexcasting.api.casting.eval.ResolvedPatternType;
 import at.petrak.hexcasting.api.casting.eval.sideeffects.OperatorSideEffect;
@@ -59,7 +62,7 @@ public class MishapIota extends Iota {
 
     }
     @Override
-    public boolean isTruthy() {
+    public boolean isTruthy(@Nullable CastingEnvironment env) {
         return false;
     }
 
@@ -107,11 +110,11 @@ public class MishapIota extends Iota {
                 List.of(
                         new OperatorSideEffect.DoMishap(
                                 this.getValue(),
-                                new Mishap.Context(new HexPattern(HexDir.WEST, List.of()), null)
+                                new Mishap.Context(HexPattern.fromAngleString("", HexDir.WEST), null)
                         )
                 ),
                 ResolvedPatternType.ERRORED,
-                HexEvalSounds.MISHAP);
+                HexEvalSounds.MISHAP.get());
     }
 
     @Override

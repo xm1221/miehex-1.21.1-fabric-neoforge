@@ -39,7 +39,7 @@ class FrameCatch: ContinuationFrame {
             null,
             listOf(),
             ResolvedPatternType.EVALUATED,
-            HexEvalSounds.NOTHING,
+            HexEvalSounds.NOTHING.get(),
         )
     }
 
@@ -81,7 +81,7 @@ class FrameCatch: ContinuationFrame {
                       MishapIota(
                           mishap, mishap.errorMessageWithName(
                               harness.env, Mishap.Context(
-                                  HexPattern.fromAngles("", HexDir.NORTH_EAST),
+                                  HexPattern.fromAngleString("", HexDir.NORTH_EAST),
                                   Component.translatable("miehex.catch.mishap").withStyle(ChatFormatting.DARK_PURPLE)
                               )
                           )
@@ -89,7 +89,7 @@ class FrameCatch: ContinuationFrame {
                   )
               }
               val newimg = harness.image.copy(stack= TreeList.from(stack))
-              return res?.let { CastResult(NullIota(),it, newimg,listOf(), ResolvedPatternType.EVALUATED,HexEvalSounds.MISHAP,) }
+              return res?.let { CastResult(NullIota(),it, newimg,listOf(), ResolvedPatternType.EVALUATED,HexEvalSounds.MISHAP.get(),) }
             }
         }
 

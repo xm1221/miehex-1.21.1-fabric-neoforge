@@ -20,7 +20,7 @@ public class ActionRegistryHelper {
      * @param action   动作实例
      */
     public static void register(String id, String angles, HexDir startDir, Action action) {
-        HexPattern pattern = HexPattern.fromAngles(angles, startDir);
+        HexPattern pattern = HexPattern.fromAngleString(angles, startDir);
         register(id, pattern, action);
     }
 
