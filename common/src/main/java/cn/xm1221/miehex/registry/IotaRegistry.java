@@ -10,7 +10,15 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 
 public class IotaRegistry {
-    public static void init() {
+    /**
+     * Registers our iota types into {@link HexIotaTypes#REGISTRY}.
+     * <p>
+     * Kept separate from {@link #initContinuations()} because NeoForge fires its
+     * {@code RegisterEvent} once per registry: registering everything from a single
+     * callback would run this code again for every other registry and crash with a
+     * duplicate-key error.
+     */
+    public static void initIotas() {
         Registry.register(
                 HexIotaTypes.REGISTRY,
                 ResourceLocation.tryBuild(MieHexMod.MOD_ID, "enchant"),
@@ -40,12 +48,27 @@ public class IotaRegistry {
                 ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID,"type"),
                 TypeIotaType.INSTANCE
         );
+    }
 
-        // Register FrameCatch continuation type (required by hexcasting 0.12.0+ for network serialization)
+    /**
+     * Registers our continuation frame types into {@link HexContinuationTypes#REGISTRY}.
+     * <p>
+     * Register FrameCatch continuation type (required by hexcasting 0.12.0+ for network serialization).
+     */
+    public static void initContinuations() {
         Registry.register(
                 HexContinuationTypes.REGISTRY,
                 ResourceLocation.fromNamespaceAndPath(MieHexMod.MOD_ID, "catch"),
                 FrameCatch.TYPE
         );
+    }
+
+    /**
+     * Convenience method registering everything at once, for loaders that have no
+     * per-registry registration event (Fabric).
+     */
+    public static void init() {
+        initIotas();
+        initContinuations();
     }
 }
