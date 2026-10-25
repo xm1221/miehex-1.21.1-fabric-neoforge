@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>cn.xm1221.MieLib</groupId>
+  <artifactId>mielib-neoforge</artifactId>
+  <versioning>
+    <latest>0.0.3+1.21.1</latest>
+    <release>0.0.3+1.21.1</release>
+    <versions>
+      <version>0.0.3+1.21.1</version>
+    </versions>
+    <lastUpdated>20261025121340</lastUpdated>
+  </versioning>
+</metadata>

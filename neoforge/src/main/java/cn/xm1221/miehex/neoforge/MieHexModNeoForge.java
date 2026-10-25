@@ -7,6 +7,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 
 import cn.xm1221.miehex.MieHexMod;
+import cn.xm1221.miehex.MiehexWorkers;
 import cn.xm1221.miehex.registry.ActionRegisry;
 import cn.xm1221.miehex.registry.IotaRegistry;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -16,6 +17,8 @@ import net.neoforged.neoforge.registries.RegisterEvent;
 public final class MieHexModNeoForge {
     public  MieHexModNeoForge(ModContainer modContainer) {
         // Run our common setup.
+        // NeoForge does not call MieHexMod.init(); register the CastingVM worker once here.
+        MiehexWorkers.init();
         var  modBus = modContainer.getEventBus();
         // NeoForge fires RegisterEvent once per registry, so only react to the
         // registries we actually populate. Calling MieHexMod.init() here would
