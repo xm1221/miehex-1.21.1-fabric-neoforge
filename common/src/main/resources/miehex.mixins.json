@@ -6,7 +6,6 @@
   "client": [
   ],
   "mixins": [
-    "CastingVMMixin"
   ],
   "injectors": {
     "defaultRequire": 1

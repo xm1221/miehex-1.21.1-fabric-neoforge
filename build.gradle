@@ -48,6 +48,25 @@ subprojects {
         maven { url = "https://mvn.devos.one/snapshots/" }
         flatDir { dir "libs/" }
         flatDir { dir "../libs/" }
+        // Group cn.xm1221.MieLib. gh-pages does not have 0.0.3+1.21.1 yet, so the
+        // vendored repo (libs/maven, published from MieLib 57f6a6f) is listed first.
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "vendoredMieLib"
+                    url = rootProject.file("libs/maven").toURI()
+                }
+            }
+            forRepository {
+                maven {
+                    name = "xm1221Maven"
+                    url = uri("https://xm1221.github.io/maven")
+                }
+            }
+            filter {
+                includeGroup "cn.xm1221.MieLib"
+            }
+        }
     }
 
     loom {

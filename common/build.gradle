@@ -11,7 +11,8 @@ dependencies {
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 
-
+    // CastingVMHook / CastingVMWorker. Not bundled here; each loader includes its platform jar.
+    modApi("cn.xm1221.MieLib:mielib-common:${rootProject.mielib_version}") { transitive = false }
 }
 compileKotlin {
     kotlinOptions {
